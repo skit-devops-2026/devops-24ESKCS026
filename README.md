@@ -1,4 +1,4 @@
-# <Project Name>
+# PG Finder
 
 > Replace every angle-bracket placeholder below. The hygiene check in CI will
 > fail until you do.
@@ -7,17 +7,18 @@
 
 | Roll No. | Name | GitHub username |
 |---|---|---|
-| <roll> | <name> | <username> |
+| 24ESKCS026 | Aishwarya Maheshwari | aishwaryaa-11 |
 
 ## About
 
-<Two or three sentences on what this application does.>
+My PG Finder(Stayymate) is a full-stack web application designed to help students find suitable PG accommodations based on Location and budget, along with roomate-finding feature.
+My **PG Finder (Stayymate)** is a full-stack web application designed to help students find suitable PG accommodations based on **location and budget**, along with a **roommate-finding feature**. It uses **HTML, CSS, JavaScript, jQuery, Node.js, Express.js, and MongoDB**, with an interactive and user-friendly interface.
 
 ## Tech stack
 
-- Frontend: <e.g. React>
-- Backend: <e.g. Node.js / Express>
-- Database: <e.g. PostgreSQL>
+- Frontend: HTML, CSS
+- Backend: JavaScript, jQuery, Node.js, Express.js
+- Database: MongoDB
 
 ## Running locally
 
@@ -28,7 +29,7 @@ make run
 
 ## Live URL
 
-<Add once M5 is done. Until then, leave as is.>
+https://pg-project.two.vercel.app/
 
 ## Health endpoint
 
