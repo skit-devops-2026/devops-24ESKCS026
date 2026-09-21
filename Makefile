@@ -1,5 +1,3 @@
-.PHONY: install test build run docker-build docker-up
-
 install:
         @echo "No dependencies required"
 
