@@ -1,4 +1,4 @@
-.PHONY: install test build run docker-build docker-up
+.PHONY: install test build run docker-build docker-up docker-down
 
 install:
 	@echo "No dependencies required"
@@ -7,13 +7,19 @@ test:
 	bash test/test.sh
 
 build:
-	@echo "Build successful"
+	@test -f index.html
+	@test -f css/style.css
+	@test -f js/script.js
+	@echo "Static application build verified"
 
 run:
-	@echo "Open index.html in browser"
+	python -m http.server $${PORT:-8000}
 
 docker-build:
-	@echo "Docker build placeholder"
+	docker build --tag pg-finder:local .
 
 docker-up:
 	docker compose up --build
+
+docker-down:
+	docker compose down
