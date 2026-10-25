@@ -1,3 +1,4 @@
+
 services:
   pg-finder:
     build:
@@ -13,3 +14,21 @@ services:
       timeout: 5s
       start_period: 5s
       retries: 3
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./monitoring/grafana-datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml:ro
+      - ./monitoring/grafana-dashboard-provider.yml:/etc/grafana/provisioning/dashboards/dashboard.yml:ro
+      - ./monitoring/pg-finder-dashboard.json:/var/lib/grafana/dashboards/pg-finder-dashboard.json:ro
+    restart: unless-stopped
