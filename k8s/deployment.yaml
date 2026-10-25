@@ -14,6 +14,8 @@ spec:
       labels:
         app.kubernetes.io/name: pg-finder
     spec:
+      imagePullSecrets:
+        - name: ghcr-creds
       containers:
         - name: pg-finder
           image: ghcr.io/skit-devops-2026/devops-24eskcs026:latest
